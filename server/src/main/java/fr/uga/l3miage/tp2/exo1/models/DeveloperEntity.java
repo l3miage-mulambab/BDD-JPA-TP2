@@ -1,9 +1,6 @@
 package fr.uga.l3miage.tp2.exo1.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity
@@ -13,7 +10,6 @@ public class DeveloperEntity {
     private String lastname;
     private String firstname;
     private String email;
-
-    @OneToMany
+    @ManyToMany
     private Set<ProjectEntity> projects;
 }
